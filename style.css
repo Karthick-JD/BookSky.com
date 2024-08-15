@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+.container > img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    z-index: -1;
+    position: fixed;
+    cursor: default;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header img {
+    height: 100%;
+    padding-left: 20px;
+}
+
+.add-btn {
+    position: relative;
+    font-size: 24px;
+    margin-top: 11px;
+    background-color: transparent;
+    border: none;
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: white;
+    transition: 0.5s;
+}
+
+.add-btn:hover {
+    color: rgba(254, 140, 0, 0.825);
+}
+
+.add-btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    left: 50%;
+    bottom: 20px;
+    background-color: rgba(254, 140, 0, 0.825);
+    transition: 0.5s;
+}
+
+.add-btn:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.books {
+    margin: 10px 7%;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+
+.book {
+    position: relative;
+    display: inline-block;
+    background-color: #00000065;
+    width: 350px;
+    height: auto;
+    margin: 10px;
+    margin-left: 30px;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.book-title {
+    color: rgba(254, 140, 0, 0.825);
+    font-size: 35px;
+}
+
+.book-author {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #ffffffe6;
+    font-style: oblique;
+}
+
+.book-author .author-name {
+    padding-left: 5px;
+    font-size: 20px;
+    color: rgba(236, 149, 43, 0.859);
+    font-weight: bold;
+    font-style: normal;
+}
+
+.book-description {
+    font-style: oblique;
+    padding-bottom: 25px;
+    color: rgba(255, 255, 255, 0.842);
+}
+
+.delete-book {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    background-color:  rgba(241, 36, 36, 0.792);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+.back-to-top {
+    right: 15px;
+    bottom: 15px;
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    background-color: transparent;
+    display: none;
+    cursor: pointer;
+}
+
+.popup {
+    background-color: rgba(0, 0, 0, 0.696);
+    z-index: 10px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.popup-screen {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 65vh;
+    position: relative;
+    display: none;
+}
+
+.popup-screen img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    filter: brightness(60%);
+}
+
+.cancel-popup {
+    margin-left: 95%;
+    margin-top: -10%;
+    font-size: larger;
+    font-weight: bold;
+    box-shadow: 2px 2px 1px black;
+    color: rgba(235, 50, 50, 0.81);
+    background: rgba(0, 0, 0, 0.522);
+    border-radius: 5px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.input {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+}
+
+.popup-screen input {
+    width: 90%;
+    margin-left: 35px;
+    margin-right: 35px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid;
+    border-color: black;
+    color: black;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .back-to-top {
+        right: 8px;
+        bottom: 15px;
+        position: fixed;
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+        background-color: transparent;
+        display: none;
+        cursor: pointer;
+    }
+
+    .popup-screen {
+        margin-top: 50%;
+        margin-left: 5%;
+        height: 45vh;
+        width: 90%;
+        position: relative;
+        display: none;
+    }
+    
+    .popup-screen img {
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        filter: brightness(60%);
+    }
+    
+    .cancel-popup {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: larger;
+        font-weight: bold;
+        box-shadow: 2px 2px 1px black;
+        color: rgba(235, 50, 50, 0.81);
+        background: rgba(0, 0, 0, 0.522);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .input {
+        position: absolute;
+        top: 15%;
+        left: 2%;
+        width: 90%;
+    }
+    
+    .popup-screen input {
+        width: 90%;
+        margin-left: 35px;
+        margin-right: 35px;
+        height: 35px;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid;
+        border-color: black;
+        color: black;
+        font-size: 20px;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+.popup-screen input::placeholder {
+    color: black;
+}
+
+.popup-screen input:focus {
+    outline: none;
+}
+
+.popup-screen textarea {
+    width: 90%;
+    margin-left: 35px;
+    margin-right: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid;
+    border-color: black;
+    color: black;
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.popup-screen textarea::placeholder {
+    color: black;
+
+}
+
+.popup-screen textarea:focus {
+    outline: none;
+}
+
+.add-book {
+    margin-top: 20px;
+    margin-left: 42%;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.571);
+    color: rgba(255, 255, 255, 0.662);
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px black;
+    cursor: pointer;
+}
